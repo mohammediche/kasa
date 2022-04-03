@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 20px 100px;
+}
+/**** Navigation ****/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a{
+    color: #FF6060;
+    margin-left: 57px;
+    font-size: 24px;
+}
+.active{
+    text-decoration: underline;
+}
+.logoNav{
+    width: 210px;
+}
+
+/****** Home page  ******/
+.backgroundImageSection {
+    position: relative;
+    margin-top: 73px;
+    margin-bottom: 43px;
+}
+.backgroundImageSection img{
+    height: 223px;
+    filter: brightness(0.7);
+    border-radius: 25px;
+}
+.backgroundImageSection h1{
+    position: absolute;
+    top: 78px;
+    left: 373px;
+    font-size: 48px;
+    color: #fff;
+}
