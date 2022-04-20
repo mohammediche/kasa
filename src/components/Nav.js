@@ -7,7 +7,7 @@ const Nav = () => {
        <header>
                  <a href="/kasa"><img className='logoNav' src={Logo} alt="Logo Kasa" /></a>
            <nav className='nav'>
-               <NavLink to={"/kasa"}>Accueil</NavLink>
+               <NavLink to={"/kasa/"}>Accueil</NavLink>
                <NavLink to={"/propos"}>A Propos</NavLink>
            </nav>
        </header>
