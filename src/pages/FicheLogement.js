@@ -19,7 +19,7 @@ const FicheLogement = () => {
     useEffect(()=>{
       
 
-        axios.get("./db.json")
+        axios.get("./kasa/db.json")
         .then((res)=>{
 
             setData(res.data.find(oneData => oneData.id === articleId))
