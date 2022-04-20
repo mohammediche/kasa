@@ -1,30 +1,43 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-body{
+
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 20px 100px;
 }
+
 /**** Navigation ****/
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav a{
+
+.nav a {
     color: #FF6060;
     margin-left: 57px;
     font-size: 24px;
 }
-.active{
+
+.active {
     text-decoration: underline;
 }
-.logoNav{
+
+.logoNav {
     width: 210px;
+}
+
+.logoFooter {
+    width: 122px;
 }
 
 /****** Home page  ******/
@@ -33,15 +46,239 @@ header{
     margin-top: 73px;
     margin-bottom: 43px;
 }
-.backgroundImageSection img{
+
+.backgroundImageSection img {
     height: 223px;
+    width: 100%;
     filter: brightness(0.7);
     border-radius: 25px;
 }
-.backgroundImageSection h1{
+
+.backgroundImageSection h1 {
     position: absolute;
-    top: 78px;
-    left: 373px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 48px;
     color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* Gallery*/
+.allGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+    padding: 56px 50px;
+    border-radius: 25px;
+}
+
+.gallery {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: #ff6060;
+
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.bgGradient {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+
+}
+
+/**********  Page Logement ( 2eme page )  *************/
+.carousel {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+.flex-ContentLogement {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #FF6060;
+}
+
+.contentLogement h1 {
+    font-size: 36px;
+}
+
+.contentLogement h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    padding: 3px 40px;
+    background: #FF6060;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.infoUser {
+    display: flex;
+    align-items: center;
+}
+
+.infoUser h2 {
+    text-align: end;
+}
+
+.infoUser img {
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.stars {
+    text-align: end;
+    font-size: 22px;
+}
+
+/*** les dropsDown description et Équipements ***/
+.allContentDescriptionEquipements {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.description,
+.equipments {
+    width: 100%;
+    margin: 20px;
+}
+
+.description button,
+.equipments button,
+.contentAPropos button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+    padding: 13px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #FF6060;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.chevronBottom {
+    transform: rotate(180deg);
+    transition: 200ms;
+}
+
+.chevronTop {
+    transform: rotate(0deg);
+    transition: 200ms;
+}
+
+.descriptionContent,
+.equipmentsContent {
+    padding: 40px 12px 27px 20px;
+    background: #F6F6F6;
+    height: 249px;
+    border-radius: 5px;
+}
+
+.description p,
+.equipments p {
+    color: #FF6060;
+    line-height: 25.67px;
+}
+
+.colorWhite {
+    color: #fff;
+}
+
+
+
+
+/*************  undefinedPage  ****************/
+.centerPageUndefined {
+    text-align: center;
+    color: #FF6060;
+}
+
+.centerPageUndefined a {
+    color: #FF6060;
+    position: relative;
+    top: 172px;
+    text-decoration: underline;
+}
+
+.centerPageUndefined span {
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 410px;
+}
+
+/***************************** Page A Propos  *************************************/
+.container-APropos {
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.contentAPropos {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.content {
+    display: none;
+    padding: 40px 12px 27px 20px;
+    background: #F6F6F6;
+    height: 249px;
+    border-radius: 5px;
+}
+
+.openDropDown {
+    display: block !important;
+}
+
+
+/***************************** footer for all pages *************************************/
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: black;
+    color: #fff;
+    padding: 30px;
+    margin-top: 50px;
 }

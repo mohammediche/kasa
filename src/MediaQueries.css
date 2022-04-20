@@ -1,0 +1,56 @@
+@media screen and (max-width: 1000px) {
+
+    body {
+        margin: 20px;
+    }
+
+    .nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    /** Home page***/
+    .backgroundImageSection h1 {
+        font-size: 24px;
+    }
+
+    .allGallery {
+        padding: 0;
+        background: transparent;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    /*** page FicheLogement****/
+
+    .tags span {
+        padding: 3px 20px;
+        font-size: 10px;
+    }
+
+    .flex-ContentLogement {
+        display: block;
+    }
+
+    #user {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    /* description et équipements*/
+    .allContentDescriptionEquipements {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /********** Page Undefined **************/
+    .centerPageUndefined span {
+        font-size: 120px;
+    }
+
+}
