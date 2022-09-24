@@ -52,5 +52,8 @@
     .centerPageUndefined span {
         font-size: 120px;
     }
+    .logoNav{
+        width: 110px;
+    }
 
 }
