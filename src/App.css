@@ -112,12 +112,33 @@ header {
 }
 
 /**********  Page Logement ( 2eme page )  *************/
+.galeriePictures{
+    position: relative;
+}
 .carousel {
     height: 415px;
     width: 100%;
     object-fit: cover;
     margin-top: 20px;
     border-radius: 25px;
+}
+.chevronRight {
+    transform: rotate(90deg);
+    width: 80px;
+    position: absolute;
+    top: 175px;
+    right: 0px;
+    cursor: pointer;
+
+}
+.chevronLeft  {
+    transform: rotate(-90deg);
+    width: 80px;
+    position: absolute;
+    top: 175px;
+    left: 0px;
+    cursor: pointer;
+
 }
 
 .flex-ContentLogement {
