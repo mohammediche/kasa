@@ -1,41 +1,44 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import chevron from "../images/chevron.svg";
 
 const GalleryCarousel = (props) => {
-  const pictures = props.urlPictures;
-  const [pictureUrl, setPictureUrl] = useState(pictures[0]);
+  const [picturesUrl, setPictureUrl] = useState([]);
+  const [currentPicture, setCurrentPicture] = useState(0);
+  // if (pictures) {
+  //   const urlPictures = pictures.pictures;
+  //   setPictureUrl(urlPictures);
+  // }
+  useEffect(() => {
+    // const picturesUrl = props.data;
+    setPictureUrl(props.data);
+  }, [props.data]);
+
+  // à enlever après si c'est pas nécessaire
+  if (!Array.isArray(props.data) || props.data.length <= 0) {
+    return null;
+  }
   /***** next picture  ******/
   const nextPicture = () => {
-    if (pictures) {
-      for (let index = 0; index < pictures.length; index++) {
-        const nextPictureUrl = pictures[index + 1];
-        setPictureUrl(nextPictureUrl);
-      }
-    }
+    setCurrentPicture(currentPicture === props.data.length - 1 ? 0 : currentPicture + 1);
   };
-  console.log(pictureUrl);
-  //   const [pictureUrl, setPictureUrl] = useState(pictures && pictures[0]);
+  /***** prev picture  ******/
+  const prevPicture = () => {
+    setCurrentPicture(currentPicture === 0 ? props.data.length - 1 : currentPicture - 1);
+  };
 
-  //   console.log(pictureUrl);
-  //   const nextPicture = () => {
-  //     for (let index = 0; index < pictures.length; index++) {
-  //       // const element = pictures[index];
-  //       const nextPictureUrl = pictures[index + 1];
-  //       console.log(nextPictureUrl);
-  //       return setPictureUrl(nextPictureUrl);
-  //     }
-  //   };
+  console.log(currentPicture);
 
   return (
     <section className="galeriePictures">
       {/* <img className="carousel" src={pictures ? pictureUrl : ""} alt={""} /> */}
-      {/* {pictures &&
-        pictures.map((urlPicture, key) => {
-          return <img key={key} className="carousel" src={urlPicture} alt={""} />;
-        })} */}
-      <img src={chevron} alt="chevron" className={"chevronRight"} onClick={() => nextPicture()} />
-      <img src={chevron} alt="chevron" className={"chevronLeft"} />
+      {picturesUrl &&
+        picturesUrl.map((urlPicture, i) => {
+          return currentPicture === i && <img key={i} className="carousel" src={urlPicture} alt={""} />;
+        })}
+      <img src={chevron} alt="chevron" className={"chevronRight"} onClick={nextPicture} />
+      <img src={chevron} alt="chevron" className={"chevronLeft"} onClick={prevPicture} />
     </section>
   );
 };

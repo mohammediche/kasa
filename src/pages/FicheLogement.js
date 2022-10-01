@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
-// import GalleryCarousel from "../components/GalleryCarousel";
+import GalleryCarousel from "../components/GalleryCarousel";
 import Nav from "../components/Nav";
 import chevron from "../images/chevron.svg";
 
@@ -29,13 +29,13 @@ const FicheLogement = () => {
         setData(dataClient);
       })
       .catch((error) => console.log(error));
-  });
+  }, [articleId]);
 
   return (
     <div>
       <Nav />
       <main>
-        {/* <GalleryCarousel urlPictures={data.pictures} /> */}
+        <GalleryCarousel data={data.pictures} />
 
         <section className="flex-ContentLogement">
           <div className="contentLogement">
